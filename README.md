@@ -1,4 +1,4 @@
-##CANbus Library for Teensy 3.1, 3.2, 3.5, and 3.6
+##CANbus Library for Teensy 3.1, 3.2, 3.5, and 3.6, 4.0/4.1 in classic 2.0B mode soon.
 
 ###Introduction
 FlexCAN is a serial communication driver for the CAN peripherial built into the Teensy CPUs. Versions 3.1, 3.2, and 3.5 of the board support single CAN0 controller while version 3.6 supports dual CAN0/CAN1 controllers.  The driver is organized in the Arduino library format.
