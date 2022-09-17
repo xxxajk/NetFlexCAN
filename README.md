@@ -3,11 +3,11 @@ Mostly drop-in replacement for FlexCAN library.
 
 TO-DO: 
 - Teensy 4.0/4.1 in classic 2.0B mode, all 3 CAN ports.
-- Document new API calls and any differences from the original FlexCAN library.
+- Document new API calls and any differences from the original FlexCAN library. I hate writing docs...
 - Document where to buy my KE1xF board and where to get the Arduino addon, have to wait for silicon fabs to get rolling again...
 
 ### Introduction
-FlexCAN is a serial communication driver for the CAN peripherial built into the Teensy CPUs. Versions 3.1, 3.2, and 3.5 of the board support single CAN0 controller while version 3.6 supports dual CAN0/CAN1 controllers.  The driver is organized in the Arduino library format.
+NetFlexCAN is a serial communication driver for the CAN peripherial built into the Teensy CPUs. Versions 3.1, 3.2, and 3.5 of the board support single CAN0 controller while version 3.6 supports dual CAN0/CAN1 controllers.  The driver is organized in the Arduino library format.
 
 When the FlexCAN object is configured on Teensy 3.1/3.2, Arduino pins Digital 3 and Digital 4 are assigned to CAN functions TX and RX.
 
