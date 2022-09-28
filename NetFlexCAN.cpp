@@ -1060,9 +1060,6 @@ bool FlexCAN::addToRingBuffer(CAN_frame_ringbuffer_t &ring, const CAN_message_t 
  */
 
 bool FlexCAN::coalesceToRingBuffer(CAN_frame_ringbuffer_t &ring, const CAN_message_t &msg) {
-#if 0
-        return addToRingBuffer(ring, msg);
-#else
         volatile CAN_message_t *last=&ring.buffer[(ring.head + (ring.size - 1)) % ring.size];
         uint16_t newsize = last->len + msg.len;
 
@@ -1079,7 +1076,6 @@ bool FlexCAN::coalesceToRingBuffer(CAN_frame_ringbuffer_t &ring, const CAN_messa
         // set new size
         last->len = newsize;
         return (true);
-#endif
 }
 
 /*

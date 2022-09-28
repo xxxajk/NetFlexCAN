@@ -227,10 +227,6 @@ private:
         void waitReady();
         bool isFrozen();
 
-        bool usesGlobalTxRing(uint8_t mbox) {
-                return (mbox < getNumMailBoxes() ? txRings[mbox] == 0 : true);
-        };
-
         bool isTxBox(uint8_t mbox) {
                 return (mbox >= getFirstTxBox() && mbox < getNumMailBoxes());
         };
@@ -276,6 +272,10 @@ public:
                 return NUM_MAILBOXES;
         };
 
+        bool usesGlobalTxRing(uint8_t mbox) {
+                return (mbox < getNumMailBoxes() ? txRings[mbox] == 0 : true);
+        };
+
         inline uint8_t getNumRxBoxes() {
                 return getNumMailBoxes() - numTxMailboxes;
         };
@@ -310,6 +310,7 @@ public:
         void stopStats(void) {
                 stats.enabled = false;
         };
+
         void clearStats(void);
 
         CAN_stats_t getStats(void) {
